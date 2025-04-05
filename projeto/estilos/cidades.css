@@ -1,0 +1,230 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Barra superior tipo macOS */
+.mac-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.4s ease;
+}
+
+.mac-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.mac-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mac-icon img {
+    height: 36px;
+    width: auto;
+}
+
+.mac-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.mac-menu a {
+    position: relative;
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.mac-menu a:hover {
+    color: #e63946;
+}
+
+.mac-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #e63946;
+    transition: width 0.3s ease;
+}
+
+.mac-menu a:hover::after {
+    width: 100%;
+}
+
+.mac-menu a.active {
+    color: #e63946;
+}
+
+/* Seção cidades */
+.cidades-section {
+    padding: 100px 20px 40px;
+    text-align: center;
+}
+
+/* Título com brilho contínuo suave */
+.cidades-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    background: linear-gradient(
+        120deg,
+        #222 0%,
+        #444 30%,
+        #fff 50%,
+        #444 70%,
+        #222 100%
+    );
+    background-size: 300% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: brilho-letras 3s linear infinite;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+/* Brilho animado */
+.cidades-section h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: brilho-passa 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes brilho-letras {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+/* Grid de cidades */
+.cidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Card das cidades */
+.cidade-card {
+    position: relative;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    overflow: hidden;
+}
+
+.cidade-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+.cidade-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    opacity: 0.2;
+    filter: blur(4px);
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.cidade-card:hover::before {
+    opacity: 0.45;
+    filter: blur(0.5px);
+}
+
+.cidade-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 40%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.cidade-card * {
+    position: relative;
+    z-index: 2;
+}
+
+.cidade-card h3 {
+    color: #d62828;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.cidade-card p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* Bandeiras personalizadas */
+.cidade-card[data-bandeira="rio-do-sul"]::before {
+    background-image: url("../img/bandeiras/riodosul.png");
+}
+
+.cidade-card[data-bandeira="ituporanga"]::before {
+    background-image: url("../img/bandeiras/ituporanga.png");
+}
