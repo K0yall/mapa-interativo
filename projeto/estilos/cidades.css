@@ -59,7 +59,7 @@ body {
     text-decoration: none;
     color: #222;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     transition: color 0.3s ease;
 }
 
@@ -97,14 +97,12 @@ body {
     font-size: 2.4rem;
     margin-bottom: 40px;
     font-weight: bold;
-    background: linear-gradient(
-        120deg,
-        #222 0%,
-        #444 30%,
-        #fff 50%,
-        #444 70%,
-        #222 100%
-    );
+    background: linear-gradient(120deg,
+            #222 0%,
+            #444 30%,
+            #fff 50%,
+            #444 70%,
+            #222 100%);
     background-size: 300% auto;
     color: transparent;
     background-clip: text;
@@ -124,12 +122,10 @@ body {
     left: -60%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.25) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(255, 255, 255, 0) 100%);
     transform: skewX(-25deg);
     animation: brilho-passa 3s ease-in-out infinite;
     pointer-events: none;
@@ -139,6 +135,7 @@ body {
     0% {
         background-position: 0% 0%;
     }
+
     100% {
         background-position: 100% 0%;
     }
@@ -227,4 +224,85 @@ body {
 
 .cidade-card[data-bandeira="ituporanga"]::before {
     background-image: url("../img/bandeiras/ituporanga.png");
+}
+
+
+/* -------------------------------------------------------------- */
+
+/* Card base */
+.cidade-card.expandivel {
+    position: relative;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* Botão (checkbox hack) */
+.toggle-info {
+    display: none;
+}
+
+.botao-expandir {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e63946;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.botao-expandir:hover {
+    color: #d62828;
+}
+
+/* Conteúdo extra escondido por padrão */
+.conteudo-expandido {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    color: #444;
+}
+
+/* Quando checkbox está checado, expande */
+.toggle-info:checked~.conteudo-expandido {
+    max-height: 300px;
+    opacity: 1;
+}
+
+/* ----------------------------- */
+
+/* Destaque para subtítulo */
+.destaque {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.veja-mais {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #e63946;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s ease;
+}
+
+.veja-mais:hover {
+    color: #d62828;
+}
+
+.toggle-info:checked ~ .conteudo-expandido .veja-mais {
+    opacity: 1;
+    transform: translateY(0);
 }
