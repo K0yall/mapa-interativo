@@ -1,0 +1,17 @@
+.caracteristicas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.caracteristica {
+    background-color: green;
+    border-radius: 0.5rem;
+    margin: 0rem 0.1rem 0rem 0.1rem;
+    padding: 0.2rem;
+    color: white;
+}
+
+.caracteristica::after {
+    content: "+";
+    color: white;
+}
