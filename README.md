@@ -30,5 +30,5 @@ Este projeto tem como objetivo criar um **mapa interativo** da região do **Alto
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seuusuario/altovaledoitajai.git
-   cd altovaledoitajai
+   git clone https://github.com/k0yall/mapa-interativo.git
+   cd mapa-interativo
