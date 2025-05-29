@@ -230,14 +230,14 @@ body {
 .cidade-card[data-bandeira="aurora"]::before {
     background-image: url("../img/bandeiras/aurora.png");
 }
-.cidade-card[data-bandeira="braco-do-trombudo"]::before {
-    background-image: url("../img/bandeiras/braçodotrombudo.png");
+.cidade-card[data-bandeira="braco_do_trombudo"]::before {
+    background-image: url("../img/bandeiras/braco_do_trombudo.png");
 }
-.cidade-card[data-bandeira="chapadao-do-lageado"]::before {
-    background-image: url("../img/bandeiras/chapadaodolageado.png");
+.cidade-card[data-bandeira="chapadao_do_lageado"]::before {
+    background-image: url("../img/bandeiras/chapadao_do_lageado.png");
 }
-.cidade-card[data-bandeira="dona-emma"]::before {
-    background-image: url("../img/bandeiras/donaemma.png");
+.cidade-card[data-bandeira="dona_emma"]::before {
+    background-image: url("../img/bandeiras/dona_emma.png");
 }
 .cidade-card[data-bandeira="ibirama"]::before {
     background-image: url("../img/bandeiras/ibirama.png");
@@ -248,8 +248,8 @@ body {
 .cidade-card[data-bandeira="ituporanga"]::before {
     background-image: url("../img/bandeiras/ituporanga.png");
 }
-.cidade-card[data-bandeira="jose-boiteux"]::before {
-    background-image: url("../img/bandeiras/joseboiteux.png");
+.cidade-card[data-bandeira="jose_boiteux"]::before {
+    background-image: url("../img/bandeiras/jose_boiteux.png");
 }
 .cidade-card[data-bandeira="laurentino"]::before {
     background-image: url("../img/bandeiras/laurentino.png");
@@ -257,47 +257,47 @@ body {
 .cidade-card[data-bandeira="lontras"]::before {
     background-image: url("../img/bandeiras/lontras.png");
 }
-.cidade-card[data-bandeira="mirim-doce"]::before {
-    background-image: url("../img/bandeiras/mirimdoce.png");
+.cidade-card[data-bandeira="mirim_doce"]::before {
+    background-image: url("../img/bandeiras/mirim_doce.png");
 }
 .cidade-card[data-bandeira="petrolandia"]::before {
     background-image: url("../img/bandeiras/petrolandia.png");
 }
-.cidade-card[data-bandeira="pouso-redondo"]::before {
-    background-image: url("../img/bandeiras/pousoredondo.png");
+.cidade-card[data-bandeira="pouso_redondo"]::before {
+    background-image: url("../img/bandeiras/pouso_redondo.png");
 }
-.cidade-card[data-bandeira="presidente-getulio"]::before {
-    background-image: url("../img/bandeiras/presidentegetulio.png");
+.cidade-card[data-bandeira="presidente_getulio"]::before {
+    background-image: url("../img/bandeiras/presidente_getulio.png");
 }
-.cidade-card[data-bandeira="presidente-nereu"]::before {
-    background-image: url("../img/bandeiras/presidentenereu.png");
+.cidade-card[data-bandeira="presidente_nereu"]::before {
+    background-image: url("../img/bandeiras/presidente_nereu.png");
 }
-.cidade-card[data-bandeira="rio-do-campo"]::before {
-    background-image: url("../img/bandeiras/riodocampo.jpg");
+.cidade-card[data-bandeira="rio_do_campo"]::before {
+    background-image: url("../img/bandeiras/rio_do_campo.jpg");
 }
-.cidade-card[data-bandeira="rio-do-oeste"]::before {
-    background-image: url("../img/bandeiras/riodooeste.png");
+.cidade-card[data-bandeira="rio_do_oeste"]::before {
+    background-image: url("../img/bandeiras/rio_do_oeste.png");
 }
-.cidade-card[data-bandeira="rio-do-sul"]::before {
-    background-image: url("../img/bandeiras/riodosul.png");
+.cidade-card[data-bandeira="rio_do_sul"]::before {
+    background-image: url("../img/bandeiras/rio_do_sul.png");
 }
 .cidade-card[data-bandeira="salete"]::before {
     background-image: url("../img/bandeiras/salete.png");
 }
-.cidade-card[data-bandeira="santa-terezinha"]::before {
-    background-image: url("../img/bandeiras/santaterezinha.jpg");
+.cidade-card[data-bandeira="santa_terezinha"]::before {
+    background-image: url("../img/bandeiras/santa_terezinha.jpg");
 }
 .cidade-card[data-bandeira="taio"]::before {
     background-image: url("../img/bandeiras/taio.png");
 }
-.cidade-card[data-bandeira="trombudo-central"]::before {
-    background-image: url("../img/bandeiras/trombudocentral.png");
+.cidade-card[data-bandeira="trombudo_central"]::before {
+    background-image: url("../img/bandeiras/trombudo_central.png");
 }
-.cidade-card[data-bandeira="vidal-ramos"]::before {
-    background-image: url("../img/bandeiras/vidalramos.png");
+.cidade-card[data-bandeira="vidal_ramos"]::before {
+    background-image: url("../img/bandeiras/vidal_ramos.png");
 }
-.cidade-card[data-bandeira="vitor-meireles"]::before {
-    background-image: url("../img/bandeiras/vitormeireles.png");
+.cidade-card[data-bandeira="vitor_meireles"]::before {
+    background-image: url("../img/bandeiras/vitor_meireles.png");
 }
 .cidade-card[data-bandeira="witmarsum"]::before {
     background-image: url("../img/bandeiras/witmarsum.png");

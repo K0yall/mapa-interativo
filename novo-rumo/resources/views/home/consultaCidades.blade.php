@@ -71,7 +71,7 @@
                 </div>
             </div>
             <!-- Card: Braço do Trombudo -->
-            <div class="cidade-card expandivel" data-bandeira="braco-do-trombudo">
+            <div class="cidade-card expandivel" data-bandeira="braco_do_trombudo">
                 <div class="card-header">
                     <h3>Braço do Trombudo</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <!-- Card: Chapadão do Lageado -->
-            <div class="cidade-card expandivel" data-bandeira="chapadao-do-lageado">
+            <div class="cidade-card expandivel" data-bandeira="chapadao_do_lageado">
                 <div class="card-header">
                     <h3>Chapadão do Lageado</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -103,7 +103,7 @@
                 </div>
             </div>
             <!-- Card: Dona Emma -->
-            <div class="cidade-card expandivel" data-bandeira="dona-emma">
+            <div class="cidade-card expandivel" data-bandeira="dona_emma">
                 <div class="card-header">
                     <h3>Dona Emma</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -119,7 +119,7 @@
                 </div>
             </div>
             <!-- Card: Ibirama -->
-            <div class="cidade-card expandivel" data-bandeira="petrolandia">
+            <div class="cidade-card expandivel" data-bandeira="ibirama">
                 <div class="card-header">
                     <h3>Ibirama</h3>
                     <p class="resumo destaque">Polo cultural e econômico</p>
@@ -169,7 +169,7 @@
                 </div>
             </div>
             <!-- Card: José Boiteux -->
-            <div class="cidade-card expandivel" data-bandeira="jose-boiteux">
+            <div class="cidade-card expandivel" data-bandeira="jose_boiteux">
                 <div class="card-header">
                     <h3>José Boiteux</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -217,7 +217,7 @@
                 </div>
             </div>
             <!-- Card: Mirim Doce -->
-            <div class="cidade-card expandivel" data-bandeira="mirim-doce">
+            <div class="cidade-card expandivel" data-bandeira="mirim_doce">
                 <div class="card-header">
                     <h3>Mirim Doce</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -250,7 +250,7 @@
                 </div>
             </div>
             <!-- Card: Presidente Getúlio -->
-            <div class="cidade-card expandivel" data-bandeira="presidente-getulio">
+            <div class="cidade-card expandivel" data-bandeira="presidente_getulio">
                 <div class="card-header">
                     <h3>Presidente Getúlio</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -266,7 +266,7 @@
                 </div>
             </div>
             <!-- Card: Presidente Nereu -->
-            <div class="cidade-card expandivel" data-bandeira="presidente-nereu">
+            <div class="cidade-card expandivel" data-bandeira="presidente_nereu">
                 <div class="card-header">
                     <h3>Presidente Nereu</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -282,7 +282,7 @@
                 </div>
             </div>
             <!-- Card: Pouso Redondo -->
-            <div class="cidade-card expandivel" data-bandeira="pouso-redondo">
+            <div class="cidade-card expandivel" data-bandeira="pouso_redondo">
                 <div class="card-header">
                     <h3>Pouso Redondo</h3>
                     <p class="resumo destaque">Portal do Alto Vale</p>
@@ -298,7 +298,7 @@
                 </div>
             </div>
             <!-- Card: Rio do Campo -->
-            <div class="cidade-card expandivel" data-bandeira="rio-do-campo">
+            <div class="cidade-card expandivel" data-bandeira="rio_do_campo">
                 <div class="card-header">
                     <h3>Rio do Campo</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -314,7 +314,7 @@
                 </div>
             </div>
             <!-- Card: Rio do Oeste -->
-            <div class="cidade-card expandivel" data-bandeira="rio-do-oeste">
+            <div class="cidade-card expandivel" data-bandeira="rio_do_oeste">
                 <div class="card-header">
                     <h3>Rio do Oeste</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -330,7 +330,7 @@
                 </div>
             </div>
             <!-- Card: Rio do Sul -->
-            <div class="cidade-card expandivel" data-bandeira="rio-do-sul">
+            <div class="cidade-card expandivel" data-bandeira="rio_do_sul">
                 <div class="card-header">
                     <h3>Rio do Sul</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -366,7 +366,7 @@
                 </div>
             </div>
             <!-- Card: Santa Terezinha -->
-            <div class="cidade-card expandivel" data-bandeira="santa-terezinha">
+            <div class="cidade-card expandivel" data-bandeira="santa_terezinha">
                 <div class="card-header">
                     <h3>Santa Terezinha</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -398,7 +398,7 @@
                 </div>
             </div>
             <!-- Card: Trombudo Central -->
-            <div class="cidade-card expandivel" data-bandeira="trombudo-central">
+            <div class="cidade-card expandivel" data-bandeira="trombudo_central">
                 <div class="card-header">
                     <h3>Trombudo Central</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
@@ -414,7 +414,7 @@
                 </div>
             </div>
             <!-- Card: Vidal Ramos -->
-            <div class="cidade-card expandivel" data-bandeira="vidal-ramos">
+            <div class="cidade-card expandivel" data-bandeira="vidal_ramos">
                 <div class="card-header">
                     <h3>Vidal Ramos</h3>
                     <p class="resumo destaque">Tradição e beleza rural</p>
@@ -431,7 +431,7 @@
                 </div>
             </div>
             <!-- Card: Vitor Meireles -->
-            <div class="cidade-card expandivel" data-bandeira="vitor-meireles">
+            <div class="cidade-card expandivel" data-bandeira="vitor_meireles">
                 <div class="card-header">
                     <h3>Vitor Meireles</h3>
                     <p class="resumo destaque">Cidade do Alto Vale</p>
