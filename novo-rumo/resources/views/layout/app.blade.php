@@ -34,6 +34,6 @@
         @yield('content')
     </main>
     <script src="js/script.js"></script>
-    <script src="js/Caractetisticas.js"></script>
+    <script src="js/carregar_caracteristicas.js"></script>
 </body>
 </html>
