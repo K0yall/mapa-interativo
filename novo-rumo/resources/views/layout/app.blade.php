@@ -36,7 +36,7 @@
     </main>
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('js/slideshow.js') }}"></script>
-    <script src="js/Caractetisticas.js"></script>
+    <script src="js/carregar_caracteristicas.js"></script>
 </body>
 
 </html>
