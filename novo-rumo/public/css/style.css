@@ -9,6 +9,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #e5e5e5;
     color: #333;
+    
 }
 
 /* ------------------------------------------------------------------------------------- */
@@ -18,10 +19,11 @@ body {
     top: 0;
     width: 100%;
     height: 50px;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background-color: #000000;
+    /* fundo preto puro */
+    border-bottom: 1px solid #e63946;
+    /* linha vermelha */
+    box-shadow: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +33,7 @@ body {
 /* Menu centralizado */
 .mac-menu {
     display: flex;
-    gap: 40px;
+    gap: 60px;
 }
 
 .mac-menu li {
@@ -39,32 +41,42 @@ body {
     list-style-type: none;
 }
 
+/* Links da navbar */
 .mac-menu a {
     position: relative;
     text-decoration: none;
-    color: #222;
+    color: #e63946;
+    /* todos links vermelhos */
     font-weight: 500;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
-.mac-menu a:hover {
-    color: #e63946;
-}
-
+/* Linha vermelha que aparece só no hover */
 .mac-menu a::after {
     content: "";
     position: absolute;
     bottom: -4px;
     left: 0;
-    width: 0%;
+    width: 100%;
     height: 2px;
     background-color: #e63946;
-    transition: width 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .mac-menu a:hover::after {
-    width: 100%;
+    opacity: 1;
+}
+
+/* Hover dos links (fica vermelho, mas já está vermelho normal) */
+.mac-menu a:hover {
+    color: #e63946;
+}
+
+/* Link ativo: texto branco */
+.mac-menu a.active {
+    color: black !important;
 }
 
 /* Conteúdo principal */
@@ -95,7 +107,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     height: 100%;
 }
@@ -108,9 +120,14 @@ body {
     transform: translateY(-50%);
 }
 
+/* Inverte a cor do logo para branco (se imagem for PNG sem fundo) */
 .mac-icon img {
-    height: 40px;
-    width: auto;
+    filter: invert(0);
+    transition: filter 0.3s ease;
+}
+
+body.dark-mode .mac-icon img {
+    filter: invert(1);
 }
 
 /* ------------------------------------------------------------------- */
@@ -118,11 +135,19 @@ body {
 /* Botão de menu (mobile) */
 .menu-toggle {
     display: none;
-    background: none;
-    border: none;
+    background: transparent;
+    border: 1px solid #e63946;
     font-size: 24px;
     cursor: pointer;
-    color: #333;
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #e63946;
+    color: #000000;
 }
 
 /* Estilos para mobile */
@@ -134,9 +159,232 @@ body {
         top: 50px;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.9);
+        background: #000000;
+        /* fundo preto também no mobile */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         padding: 20px 0;
         text-align: center;
     }
+}
+
+/* Dark Mode (opcional, você já tem no final do seu CSS) */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode .content {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+body.dark-mode .mac-navbar {
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .mac-menu a {
+    color: white;
+}
+
+body.dark-mode .mac-menu a:hover {
+    color: red;
+}
+
+/* Link ativo no modo escuro */
+body.dark-mode .mac-menu a.active {
+    color: white !important;
+}
+
+.theme-toggle,
+.dark-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: transparent;
+    /* Sem fundo */
+    border: none;
+    /* Sem borda */
+    border-radius: 50%;
+    /* Mantém formato redondo */
+    padding: 10px;
+
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover,
+.dark-toggle:hover {
+    transform: translateY(-50%) scale(1.1);
+    /* Zoom leve */
+}
+
+body.dark-mode .theme-toggle,
+body.dark-mode .dark-toggle {
+    color: #fff;
+    /* Ícone branco no modo escuro */
+}
+
+
+/* IMAGEM FUNDO MENU */
+
+.background-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 75%; /* ajusta foco pra baixo */
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.background-slideshow img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+
+
+/* FOOTER */
+.site-footer {
+    background-color: #000000;
+    color: white;
+    height: 40px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.site-footer img {
+    height: 35px;
+    /* um pouco maior */
+    margin-right: 10px;
+}
+
+.site-footer span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.site-footer img {
+    height: 30px;
+    /* tamanho da logo */
+    margin-right: 10px;
+}
+
+/* Espaço para não deixar conteúdo escondido atrás da barra */
+body,
+main {
+    padding-bottom: 40px;
+    /* mesmo tamanho da barra */
+}
+
+
+
+.site-footer .footer-content {
+    max-width: none;
+    /* remove limite de largura */
+    margin: 0;
+    /* remove margem automática */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+    /* Alinha todo o conteúdo no canto esquerdo da tela */
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.site-footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.site-footer .footer-logo {
+    height: 80px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    height: 40px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 10000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.site-footer.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.site-footer img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+body,
+main {
+    padding-bottom: 40px;
+    /* espaço para barra */
+}
+
+/* -------- */
+
+.intro-message {
+    position: fixed; /* prefiro fixed pra não sumir no scroll */
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInOut 6s ease-in-out forwards;
+    letter-spacing: 1px;
+    z-index: 20; /* para ficar na frente do slideshow */
+    pointer-events: none;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    60% { opacity: 1; }
+    100% { opacity: 0; }
 }
