@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nome')->nullable(false);
             $table->integer('populacao')->nullable(false);
-            $table->decimal('custo_vida', 8, 2)->nullable(false);
+            $table->string('custo_vida'); /** Acessível, Moderado, Elevado, Altamente Dispendioso */
             $table->string('atrativos')->nullable(false);
             $table->string('descricao')->nullable(false);
+            $table->string('bandeira');
         });
     }
 
