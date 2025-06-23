@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('custo_vida'); /** Acessível, Moderado, Elevado, Altamente Dispendioso */
             $table->string('atrativos')->nullable(false);
             $table->string('descricao')->nullable(false);
-            $table->string('bandeira');
+            $table->string('identificador_alias');
         });
     }
 

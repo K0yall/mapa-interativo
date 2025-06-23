@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="{{ asset('css/cidades.css') }}">
     <link rel="stylesheet" href="{{ asset('css/caracteristicas.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+
+    <!-- CSS do Select2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <title>@yield('title')</title>
 </head>
 
@@ -34,9 +40,12 @@
     <main id="main-conteudo">
         @yield('content')
     </main>
+    @stack('scripts')
+    
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('js/slideshow.js') }}"></script>
     <script src="js/carregar_caracteristicas.js"></script>
+    
 </body>
 
 </html>
