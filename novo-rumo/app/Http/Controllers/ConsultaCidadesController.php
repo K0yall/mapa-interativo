@@ -12,6 +12,6 @@ class ConsultaCidadesController extends Controller
         $cidades = Cidades::all();
         $caracteristicas = Caracteristicas::all();
 
-        return view('home.consultaCidades', compact('cidades', 'caracteristicas'));
+        return view('cidade.consultaCidades', compact('cidades', 'caracteristicas'));
     }
 }
