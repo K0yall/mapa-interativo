@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ConsultaCidadesController;
 
 // Página inicial
 Route::get('/', function () {
@@ -14,9 +15,7 @@ Route::get('/Home', function () {
     return view('home.menu');
 });
 
-Route::get('/Cidades', function () {
-    return view('home.consultaCidades');
-});
+Route::get('/Cidades', [ConsultaCidadesController::class, 'Consultar']);
 
 // Login tradicional
 Route::get('/Login', [LoginController::class, 'showLoginForm'])->name('login');
