@@ -11,7 +11,7 @@ Route::get('/', function () {
 });
 
 // Outras páginas
-Route::get('/Home', function () {
+Route::get('/', function () {
     return view('home.menu');
 });
 
