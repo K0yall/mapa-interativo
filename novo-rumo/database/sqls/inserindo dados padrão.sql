@@ -71,3 +71,22 @@ INSERT INTO cidade_caracteristicas(cidade_id, caracteristica_id, quantidade_tota
 	(4, 2, 1);
 
 
+--para adicionar os dados nas cidades:
+INSERT INTO populacaos (cidade_id, ano, populacao)
+VALUES (21, 2022, 72654);
+
+-- Trabalho e Rendimento
+INSERT INTO trabalho_rendimentos (cidade_id, ano, rendimento_medio, taxa_ocupacao, desocupados)
+VALUES (21, 2022, 2550.75, 61.2, 1543);
+
+-- Educação
+INSERT INTO educacaos (cidade_id, ano, taxa_escolarizacao)
+VALUES (21, 2022, 98.3);
+
+-- Economia
+INSERT INTO economias (cidade_id, ano, pib, pib_per_capita, receitas_realizadas, despesas_empenhadas)
+VALUES (21, 2022, 1325000000.00, 18250.50, 96500000.00, 92300000.00);
+
+-- Saúde
+INSERT INTO saudes (cidade_id, ano, estabelecimentos_sus)
+VALUES (21, 2022, 18);

@@ -6,6 +6,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ConsultaCidadesController;
 
+
+
 // Página inicial
 Route::get('/', function () {
     return view('welcome');
@@ -20,6 +22,10 @@ Route::get('/Cidades', [ConsultaCidadesController::class, 'Consultar'])->name('c
 Route::get('Cidades/avaliar/{id}', [AvaliarCidadeController::class, 'index'])->name('avaliar.form');
 Route::post('Cidades/avaliar/{id}', [AvaliarCidadeController::class, 'registrarAvaliacao'])->name('avaliar.registrar');
 
+Route::get('/mapa', function () {
+    return view('mapa.visualizar');
+});
+
 // Login tradicional
 Route::get('/Login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/Login', [LoginController::class, 'login'])->name('login.submit');
@@ -32,3 +38,6 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 // Login social Google usando LoginController
 Route::get('/auth/google', [LoginController::class, 'redirectToGoogle'])->name('social.google.redirect');
 Route::get('/auth/google/callback', [LoginController::class, 'handleGoogleCallback'])->name('social.google.callback');
+
+
+Route::get('/cidade/{id}', [ConsultaCidadesController::class, 'mostrar'])->name('cidade.mostrar');
