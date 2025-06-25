@@ -12,8 +12,8 @@
                 </div>
                 <input type="checkbox" id="toggle-{{ $cidade->identificador_alias }}" class="toggle-info" />
                 <div class="caracteristicas">
-                    @foreach ($cidade->caracteristicas as $caracteristica)
-                        <div class="caracteristica">{{ $caracteristica->descricao }}</div>
+                    @foreach ($caracteristicasPorCidade[$cidade->id] ?? [] as $caracteristica)
+                        <div class="caracteristica avaliacao-{{ $caracteristica->avaliacao }}">{{ $caracteristica->descricao }}({{ $caracteristica->quantidade_total }})</div>
                     @endforeach
                 </div>
                 <label for="toggle-{{ $cidade->identificador_alias }}" class="botao-expandir">+ Informações</label>
@@ -24,6 +24,7 @@
                     <p>Descrição: {{ $cidade->descricao }}</p>
                     <!-- ainda não desenvolvido -->
                     <a href="#" class="veja-mais">Veja mais</a>
+                    <a href="{{ route('avaliar.form', $cidade->id) }}" class="botao-avaliar">Avaliar</a>
                 </div>
             </div>
             @endforeach
@@ -31,3 +32,4 @@
     </div>
 
 @endsection
+

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AvaliarCidadeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -15,7 +16,9 @@ Route::get('/', function () {
     return view('home.menu');
 });
 
-Route::get('/Cidades', [ConsultaCidadesController::class, 'Consultar']);
+Route::get('/Cidades', [ConsultaCidadesController::class, 'Consultar'])->name('cidades.listar');
+Route::get('Cidades/avaliar/{id}', [AvaliarCidadeController::class, 'index'])->name('avaliar.form');
+Route::post('Cidades/avaliar/{id}', [AvaliarCidadeController::class, 'registrarAvaliacao'])->name('avaliar.registrar');
 
 // Login tradicional
 Route::get('/Login', [LoginController::class, 'showLoginForm'])->name('login');
