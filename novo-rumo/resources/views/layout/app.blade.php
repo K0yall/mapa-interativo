@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/cidades.css') }}">
     <link rel="stylesheet" href="{{ asset('css/caracteristicas.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/avaliarCidade-styles.css') }}">
 
     <!-- CSS do Select2 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" />
