@@ -23,7 +23,7 @@
                     <p>Atrativos: {{ $cidade->atrativos }}</p>
                     <p>Descrição: {{ $cidade->descricao }}</p>
                     <!-- ainda não desenvolvido -->
-                    <a href="#" class="veja-mais">Veja mais</a>
+                    <a href="{{ route('cidade.mostrar', $cidade->id) }}" class="btn btn-primary" > Veja mais</a>
                 </div>
             </div>
             @endforeach

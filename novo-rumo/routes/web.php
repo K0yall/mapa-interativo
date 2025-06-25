@@ -5,6 +5,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ConsultaCidadesController;
 
+
+
 // Página inicial
 Route::get('/', function () {
     return view('welcome');
@@ -29,3 +31,6 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 // Login social Google usando LoginController
 Route::get('/auth/google', [LoginController::class, 'redirectToGoogle'])->name('social.google.redirect');
 Route::get('/auth/google/callback', [LoginController::class, 'handleGoogleCallback'])->name('social.google.callback');
+
+
+Route::get('/cidade/{id}', [ConsultaCidadesController::class, 'mostrar'])->name('cidade.mostrar');
